@@ -1,3 +1,4 @@
+import ScrollToTop from 'react-scroll-to-top';
 import { copyrightSign } from '../assets/icons';
 import { footerLogo } from '../assets/images';
 import { footerLinks, socialMedia } from '../constants';
@@ -5,6 +6,13 @@ import { footerLinks, socialMedia } from '../constants';
 const Footer = () => {
   return (
     <footer className="max-container">
+      <ScrollToTop
+        smooth
+        top={20}
+        color="#FF6452"
+        height="22"
+        className="flex justify-center items-center w-10 h-10"
+      />
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
           <a href="/">
