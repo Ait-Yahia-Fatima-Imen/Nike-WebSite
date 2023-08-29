@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import ScrollToTop from 'react-scroll-to-top';
 import { copyrightSign } from '../assets/icons';
 import { footerLogo } from '../assets/images';
@@ -33,8 +34,17 @@ const Footer = () => {
               <div
                 className="flex justify-center items-center w-12 h-12 bg-white rounded-full"
                 key={icon.alt}
+                onClick={icon.link}
               >
-                <img src={icon.src} alt={icon.alt} width={24} height={24} />
+                <a href={icon.link} target="_blank">
+                  <img
+                    src={icon.src}
+                    alt={icon.alt}
+                    width={24}
+                    height={24}
+                    className="cursor-pointer"
+                  />
+                </a>
               </div>
             ))}
           </div>
